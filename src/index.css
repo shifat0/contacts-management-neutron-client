@@ -20,4 +20,5 @@ button {
   border-radius: 10px;
   font-weight: 500;
   box-shadow: 2px 2px 5px gray;
+  width: 100%;
 }
