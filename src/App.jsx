@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
 import AddContacts from "./pages/AddContacts";
 import AllContacts from "./pages/AllContacts";
 import Home from "./pages/home";

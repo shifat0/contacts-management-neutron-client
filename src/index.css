@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .input {
+    @apply border-2 p-2;
+  }
+  .form-item {
+    @apply flex flex-col;
+  }
+  .error {
+    @apply text-red-600;
+  }
+}
+
 button {
   background-color: #80bcbd;
   padding: 10px 15px;

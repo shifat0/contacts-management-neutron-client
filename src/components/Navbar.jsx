@@ -4,9 +4,9 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-blue-700 via-purple-500 to-red-500 text-white p-4">
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="container mx-auto flex items-center justify-between gap-4">
         <NavLink to="/">
-          <span className="text-3xl font-bold ">
+          <span className="text-2xl md:text-3xl font-bold ">
             Contacts Management Neutron
           </span>
         </NavLink>
