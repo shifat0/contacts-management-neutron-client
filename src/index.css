@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button {
+  background-color: #80bcbd;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: 2px 2px 5px gray;
+}
