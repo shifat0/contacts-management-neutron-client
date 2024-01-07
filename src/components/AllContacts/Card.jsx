@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Card = ({ contact }) => {
+const Card = ({ contact, handleDelete }) => {
   const [showOptions, setShowOptions] = useState(false);
 
   const toggleOptions = () => {
@@ -80,7 +80,10 @@ const Card = ({ contact }) => {
           <button className="text-white block px-4 py-2 text-sm hover:scale-[110%] transition">
             Update
           </button>
-          <button className="bg-red-400 text-white block px-4 py-2 text-sm hover:scale-[110%] transition">
+          <button
+            className="bg-red-400 text-white block px-4 py-2 text-sm hover:scale-[110%] transition"
+            onClick={() => handleDelete(contact._id)}
+          >
             Delete
           </button>
         </div>
