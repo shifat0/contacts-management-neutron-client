@@ -4,19 +4,18 @@ import axios from "axios";
 
 const AllContacts = () => {
   const [contacts, setContacts] = useState([]);
-  // console.log(contacts);
 
   useEffect(() => {
     const fetchContacts = async () => {
-      const res = await axios.get("http://localhost:5000/api/v1/contacts");
-      // console.log(res.data);
+      const res = await axios.get(
+        "https://contacts-management-neutron-server.vercel.app/api/v1/contacts"
+      );
       setContacts(res.data);
     };
 
     try {
       fetchContacts();
     } catch (err) {
-      // console.log(err.message);
       alert(err.message);
     }
   }, [setContacts]);
