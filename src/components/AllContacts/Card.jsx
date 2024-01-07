@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Card = ({ contact, handleDelete }) => {
+const Card = ({ contact, handleDelete, toogleModal }) => {
   const [showOptions, setShowOptions] = useState(false);
 
   const toggleOptions = () => {
@@ -77,7 +77,10 @@ const Card = ({ contact, handleDelete }) => {
             showOptions ? "opacity-100" : "opacity-0"
           } transition-opacity duration-300`}
         >
-          <button className="text-white block px-4 py-2 text-sm hover:scale-[110%] transition">
+          <button
+            className="text-white block px-4 py-2 text-sm hover:scale-[110%] transition"
+            onClick={() => toogleModal(contact)}
+          >
             Update
           </button>
           <button
