@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Card = () => {
+const Card = ({ contact }) => {
   const [showOptions, setShowOptions] = useState(false);
 
   const toggleOptions = () => {
@@ -10,15 +10,26 @@ const Card = () => {
   return (
     <div className="relative max-w-sm mt-5 rounded overflow-hidden shadow-lg">
       <img
-        className="w-full"
-        src="https://placekitten.com/400/300"
+        className="w-full h-[250px] object-cover overflow-hidden"
+        src={contact?.profilePicture}
         alt="Card"
       />
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">Card Title</div>
-        <p className="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-          odio.
+        <p>
+          <span className="font-bold mb-2">Name: </span>
+          {contact?.name}
+        </p>
+        <p>
+          <span className="font-bold mb-2">Email: </span>
+          {contact?.email}
+        </p>
+        <p>
+          <span className="font-bold mb-2">Phone Number: </span>
+          {contact?.phoneNumber}
+        </p>
+        <p>
+          <span className="font-bold mb-2">Address: </span>
+          {contact?.address}
         </p>
       </div>
       {/* Three Dot */}
